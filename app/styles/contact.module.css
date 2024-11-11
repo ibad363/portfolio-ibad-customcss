@@ -1,0 +1,164 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to right, #1a202c, #2d3748, #1a202c);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.mapSection {
+    flex: 1;
+    position: relative;
+    height: 700px;
+    min-height: 500px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    filter: grayscale(1) opacity(0.7);
+}
+
+.addressOverlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(17, 24, 39, 0.9);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: max-content;
+    max-width: 80%;
+}
+
+.addressItem {
+    margin-bottom: 1rem;
+}
+
+.addressItem:last-child {
+    margin-bottom: 0;
+}
+
+.addressLabel {
+    color: #34d399;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.addressText {
+    color: #d1d5db;
+    font-size: 0.875rem;
+}
+
+.formSection {
+    flex: 1;
+}
+
+.title {
+    color: #34d399;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.underline {
+    width: 3rem;
+    height: 3px;
+    background-color: #34d399;
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+}
+
+.description {
+    color: #d1d5db;
+    margin-bottom: 2rem;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    color: #34d399;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.input, .textarea {
+    width: 100%;
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 0.75rem;
+    color: #d1d5db;
+    font-size: 0.875rem;
+}
+
+.textarea {
+    height: 150px;
+    resize: none;
+}
+
+.input:focus, .textarea:focus {
+    outline: none;
+    border-color: #34d399;
+}
+
+.button {
+    background-color: #34d399;
+    color: #111827;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #10b981;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .mapSection {
+        height: 400px;
+        min-height: 400px;
+        width: 100%;
+        position: relative;
+    }
+
+    .map {
+        height: 400px;
+    }
+
+    .addressOverlay {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(17, 24, 39, 0.95);
+        padding: 1rem;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .addressItem {
+        margin-bottom: 0.75rem;
+    }
+
+    .addressLabel {
+        font-size: 0.7rem;
+    }
+
+    .addressText {
+        font-size: 0.8rem;
+    }
+} 
